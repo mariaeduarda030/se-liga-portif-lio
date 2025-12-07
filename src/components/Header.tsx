@@ -30,7 +30,7 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="text-xl font-bold">
-          <span className="text-gradient">SN</span>
+          <span className="text-gradient">ME</span>
         </a>
 
         {/* Desktop Navigation */}
