@@ -22,7 +22,7 @@ const Hero = () => {
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
           Olá, eu sou{" "}
-          <span className="text-gradient">Seu Nome</span>
+          <span className="text-gradient">Maria Eduarda</span>
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>

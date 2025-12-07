@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>
-            © {currentYear} <span className="text-foreground font-medium">Seu Nome</span>. Todos os direitos reservados.
+            © {currentYear} <span className="text-foreground font-medium">Maria Eduarda</span>. Todos os direitos reservados.
           </p>
           <p className="font-mono text-xs">
             Feito com <span className="text-primary">♥</span> usando React + TypeScript
