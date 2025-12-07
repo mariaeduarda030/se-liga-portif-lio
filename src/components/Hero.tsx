@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const Hero = () => {
   return (
@@ -13,38 +14,55 @@ const Hero = () => {
       {/* Animated grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="animate-fade-in">
-          <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary border border-primary/30 rounded-full bg-primary/5">
-            Desenvolvedor de Software
-          </span>
-        </div>
-        
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-          Olá, eu sou{" "}
-          <span className="text-gradient">Maria Eduarda</span>
-        </h1>
-        
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          Criando experiências digitais excepcionais através de código limpo e design inovador. Confira meus projetos abaixo.
-        </p>
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Profile Photo */}
+          <div className="animate-fade-in order-1 lg:order-2 flex-shrink-0">
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-primary/50 blur-md opacity-60" />
+              <img 
+                src={profilePhoto} 
+                alt="Foto de Maria Eduarda"
+                className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-2 border-primary/30"
+              />
+            </div>
+          </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.3s" }}>
-          <Button 
-            variant="default" 
-            size="lg"
-            className="glow"
-            onClick={() => document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Ver Projetos
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Entrar em Contato
-          </Button>
+          {/* Text Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1 flex-1">
+            <div className="animate-fade-in">
+              <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-primary border border-primary/30 rounded-full bg-primary/5">
+                Desenvolvedora de Software
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              Olá, eu sou{" "}
+              <span className="text-gradient">Maria Eduarda</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              Criando experiências digitais excepcionais através de código limpo e design inovador. Confira meus projetos abaixo.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.3s" }}>
+              <Button 
+                variant="default" 
+                size="lg"
+                className="glow"
+                onClick={() => document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Ver Projetos
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Entrar em Contato
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
